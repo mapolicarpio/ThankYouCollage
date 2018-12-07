@@ -1,4 +1,4 @@
-//This isnt organized anyways so i should not even bother
+//This isnt organized btw
 int blood = #B90000;
 int gray = #908888;
 int Vtex1 = 45;
@@ -10,6 +10,8 @@ int Vtex6 = 510;
 int Vtex7 = 80;
 int Vtex8 = 480;
 int L = 1;
+int t;
+
 
 void setup() {
   size(850, 850);
@@ -128,7 +130,7 @@ void setup() {
 }
 
 void draw() {
-  frameRate(60);
+  frameRate(5);
   noStroke();
   fill(blood);
 
@@ -141,7 +143,7 @@ void draw() {
 
   if (mousePressed) {
     fill(0, 0, 0, 0);
-  } else {
+  } else { 
     fill(gray);
   }
   beginShape();
@@ -165,115 +167,128 @@ void draw() {
     rect(0, 140, 150, 30, 80);
     line(90, 140, 70, 170);
     line(70, 140, 50, 170);
-  } else {
+    fill(255);
+      text("then...",0,222);
+          fill(255);
+    text("Wiggle the scroll bar up and down", 0, 242);
+    text("for 10 seconds, until all words appear", 0, 272);
+  } else { 
     if (mousePressed) {
       fill(255, 255, 255, 0);
-    } else {
+    } else { 
       fill(#FCC357);
-      text("Press the mouse once", 0, 152);
+      text("Press the mouse once ", 0, 152);
+     
     }
   }
 }
-
+/*void keyReleased() {
+   rect(0, 140, 150, 30, 80);
+    line(90, 180, 70, 170);
+    line(70, 180, 50, 170);
+} */
 void keyPressed() {
+  stroke(#EAB550);
+ rect(0, 180, 180, 40, 800);
+    line(90, 180, 70, 220);
+    line(70, 180, 50, 220);
 
 
   textSize(32);
-  fill(0);
+ fill(random(25,175),random(25,175),random(25,175));
   rotate(radians(25));
   text("You're ", 300, 50);
   delay(300);
-  if (keyPressed) {
-    keyCode =1;
+  //if (keyPressed) {
     redraw();
     textSize(32);
-    fill(0);
+    fill(random(25,175),random(25,175),random(25,175));
     rotate(radians(-50));
     text("Not", 370, 400);
     delay(600);
-  }
-  if (keyPressed) {
+  //}
+ // if (keyPressed) {
     redraw();
     textSize(32);
-    fill(0);
+   fill(random(25,175),random(25,175),random(25,175));
     rotate(radians(50));
     text("A", 380, 140);
     delay(900);
-  }
-  if (keyPressed) {
+  //}
+  //if (keyPressed) {
 
     redraw();
     textSize(32);
-    fill(0);
+    fill(random(25,175),random(25,175),random(25,175));
     rotate(radians(-50));
     text("Surgeon", 300, 500);
     delay(1200);
-  }
-  if (keyPressed) {
+ // }
+ // if (keyPressed) {
 
     redraw();
     textSize(32);
-    fill(0);
+     fill(random(25,175),random(25,175),random(25,175));
     rotate(radians(50));
     text("But", 410, 230);
     delay(1500);
-  }
-  if (keyPressed) {
+ // }
+ // if (keyPressed) {
 
     redraw();
     textSize(32);
-    fill(0);
+     fill(random(25,175),random(25,175),random(25,175));
     rotate(radians(-50));
     text("You're", 280, 600);
     delay(1800);
-    if (keyPressed) {
+   // if (keyPressed) {
 
       redraw();
       textSize(32);
-      fill(0);
+       fill(random(25,175),random(25,175),random(25,175));
       rotate(radians(50));
       text("Surgerizing", 410, 330);
       delay(2100);
-    }
-    if (keyPressed) {
+ //   }
+ //   if (keyPressed) {
 
       redraw();
       textSize(32);
-      fill(0);
+       fill(random(25,175),random(25,175),random(25,175));
       rotate(radians(-50));
       text("For", 240, 690);
       delay(2400);
-    }
-    if (keyPressed) {
+  //  }
+  //  if (keyPressed) {
 
       redraw();
       textSize(32);
-      fill(0);
+       fill(random(25,175),random(25,175),random(25,175));
       rotate(radians(50));
       text("Your", 500, 420);
       delay(2700);
-    }
-    if (keyPressed) {
+  //  }
+  //  if (keyPressed) {
 
       redraw();
       textSize(32);
-      fill(0);
+       fill(random(25,175),random(25,175),random(25,175));
       rotate(radians(-50));
       text("Family", 180, 780);
-    }
+   // }
     if (keyPressed) {
       for (int i = 0; i< width; i= i+300) {
         for (int k = 0; k< height; k= k+20) {
-          fill(#FF29EA);
+          fill(255,random(0,152),random(147,255));
           textSize(32);
-         
+       //delay(3300);  
 text("Thank You", i,k);
 noLoop();
         }
       }
     }
   }
-}
+//}
 
 void mouseReleased() {
   if (blood == #B90000) {
