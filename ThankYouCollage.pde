@@ -1,17 +1,5 @@
-//This isnt organized btw
 int blood = #B90000;
 int gray = #908888;
-int Vtex1 = 45;
-int Vtex2 = 530;
-int Vtex3 = 70;
-int Vtex4 = 550;
-int Vtex5 = 100;
-int Vtex6 = 510;
-int Vtex7 = 80;
-int Vtex8 = 480;
-int L = 1;
-int t;
-
 
 void setup() {
   size(850, 850);
@@ -153,10 +141,10 @@ void draw() {
 
   endShape(CLOSE);
   beginShape();
-  vertex(Vtex1, Vtex2);
-  vertex(Vtex3, Vtex4);
-  vertex(Vtex5, Vtex6);
-  vertex(Vtex7, Vtex8);
+  vertex(45, 530);
+  vertex(70, 550);
+  vertex(100, 510);
+  vertex(80, 480);
   endShape(CLOSE);
 
   if (mousePressed) {
